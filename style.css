@@ -79,6 +79,12 @@ section.main-content-area{
                 justify-content: space-evenly;
                 text-align: left;
             }
+
+            .links {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
         }
 
         .right-side{
