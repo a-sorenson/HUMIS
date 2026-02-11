@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+div#parent {
+    border: 1px black solid;
+    width : 780px;
+    margin: 0 auto;
+}
+
+div#parent section {
+    border: 1px black solid;
+}
+
+section.sub-head {
+    background: url("./files/histHomepic.jpg") top left no-repeat;
+    height: 50px;
+}
+
+section.main-content-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    nav{
+        min-height: 20px;
+        border: 1px solid black;
+        text-align: right;
+        padding-right: 20px;
+        font-size: 12px;
+
+        a{
+            margin: 0 5px 0 5px;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover{ /*pseudo class when users mouse overs*/
+                text-decoration: underline;
+            }
+        }
+
+        &.bottomNav { /*& allows it to be applied to nav directly instead on only working with a child.*/
+            font-size: 10px;
+            a {
+                text-transform: lowercase;
+            }
+        }
+    }
+
+    section.brown-box {
+        background: url("./files/brownBox.gif") center repeat;
+        padding: 20px;
+        margin: 20px;
+        justify-self: center;
+        border-radius: 10px;
+        min-height: 400px;
+        display: flex;
+
+        /*Take out later*/
+        > * {
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .left-side{
+            width:40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            > * {
+                border: 1px solid black;
+            }
+
+            nav{
+                min-height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                text-align: left;
+            }
+        }
+
+        .right-side{
+            width:60%;
+            background-color: white;
+            padding: 10px;
+
+            img {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            div.more{
+                text-align: right;
+                a {
+                    color: red;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 12px;
+
+                    &:hover{ /*pseudo class when users mouse overs*/
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+
+
+
+
+
+        }
+    }
+}
+
+section.footer {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    background: #60663e;
+    color: white;
+    padding: 5px;
+    margin-top: 25px
+}
+
+h4 {
+    color:red;
+    border-bottom: 2px dashed red;
+    font-weight: unset;
+    margin: 0 0 5px 0;
+
+
+}
