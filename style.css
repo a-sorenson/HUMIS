@@ -8,8 +8,8 @@ div#parent {
     background-color: white;
 }
 
-div#parent section {
-
+div#parent section > img {
+    display: block;
 }
 
 section.sub-head {
@@ -28,7 +28,7 @@ section.main-content-area{
     nav.secondary{
         min-height: 20px;
         padding-right: 20px;
-        font-size: 12px;
+        font-size: 9px;
         display: flex;
         justify-content: right;
         align-items: center;
@@ -45,7 +45,7 @@ section.main-content-area{
         }
 
         &.bottomNav { /*& allows it to be applied to nav directly instead on only working with a child.*/
-            font-size: 10px;
+            font-size: 8px;
             a {
                 text-transform: lowercase;
             }
@@ -113,7 +113,8 @@ section.main-content-area{
             }
 
             h4 {
-                color:#60663e
+                color:#60663e;
+                text-transform: uppercase;
             }
 
             div.more{
