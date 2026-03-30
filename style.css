@@ -1,3 +1,7 @@
+* {
+    border: black solid 1px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #292929;
@@ -17,118 +21,116 @@ section.sub-head {
     height: 50px;
 }
 
-section.main-content-area{
+section.main-content-area {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-image: url("./files/uofu_medallion_rt.gif");
     background-repeat: no-repeat;
     background-position: right bottom;
+}
+nav.secondary{
+    min-height: 20px;
+    padding-right: 20px;
+    font-size: 9px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
 
-    nav.secondary{
-        min-height: 20px;
-        padding-right: 20px;
-        font-size: 9px;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        gap: 10px;
+    a{
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
 
-        a{
-            color: black;
-            text-decoration: none;
-            text-transform: uppercase;
-
-            &:hover{ /*pseudo class when users mouse overs*/
-                text-decoration: underline;
-            }
-        }
-
-        &.bottomNav { /*& allows it to be applied to nav directly instead on only working with a child.*/
-            font-size: 8px;
-            a {
-                text-transform: lowercase;
-            }
+        &:hover{ /*pseudo class when users mouse overs*/
+            text-decoration: underline;
         }
     }
 
-    section.brown-box {
-        background: url("./files/brownBox.gif") center repeat;
-        padding: 20px;
-        margin: 0 20px 70px 20px;
-        justify-self: center;
-        border-radius: 10px;
-        min-height: 400px;
-        display: flex;
-        justify-content: space-between;
-
-
-        .left-side{
-            width:30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            nav{
-
-                a {
-                    display: block;
-                    text-decoration: none;
-                    color: black;
-                    border-bottom: 2px solid #60663e;
-                    padding: 8px 0 8px 12px;
-                    text-transform: uppercase;
-                    font-size: 11px;
-                    margin: 0 15px 0 15px;
-
-                    &:hover{
-                        color: white;
-                        background-color: #60663e;
-
-                    }
-                }
-            }
-
-            .links {
-                display: flex;
-                flex-direction: column-reverse;
-                align-items: flex-start;
-                margin-bottom: 10px;
-            }
+    &.bottomNav { /*& allows it to be applied to nav directly instead on only working with a child.*/
+        font-size: 8px;
+        a {
+            text-transform: lowercase;
         }
+    }
+}
 
-        .right-side{
-            width:62%;
-            background-color: white;
-            padding: 10px;
-            margin-bottom: 50px;
+section.brown-box {
+    background: url("./files/brownBox.gif") center repeat;
+    padding: 20px;
+    margin: 0 20px 70px 20px;
+    justify-self: center;
+    border-radius: 10px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
 
-            img {
-                margin-bottom: 10px;
-                width: 100%;
-            }
+.left-side {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-            p {
-                font-size: 10px;
-            }
+nav.primary{
 
-            h4 {
-                color:#60663e;
-                text-transform: uppercase;
-            }
+    a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        border-bottom: 2px solid #60663e;
+        padding: 8px 0 8px 12px;
+        text-transform: uppercase;
+        font-size: 11px;
+        margin: 0 15px 0 15px;
 
-            div.more{
-                text-align: right;
-                a {
-                    color: red;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-size: 12px;
+        &:hover{
+            color: white;
+            background-color: #60663e;
 
-                    &:hover{ /*pseudo class when users mouse overs*/
-                        text-decoration: underline;
-                    }
-                }
+        }
+    }
+}
+
+.links {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.right-side{
+    width:62%;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 50px;
+
+    #pottery_img {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    h4 {
+        color:#60663e;
+        text-transform: uppercase;
+    }
+
+    div.more{
+        text-align: right;
+        a {
+            color: red;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+
+            &:hover{ /*pseudo class when users mouse overs*/
+                text-decoration: underline;
             }
         }
     }
@@ -149,3 +151,20 @@ h4 {
     font-weight: unset;
     margin: 0 0 5px 0;
 }
+
+.fellowship-main-content {
+    display: flex;
+}
+
+#header_img {
+    width: 100%;
+}
+
+.fellowship-main-content > div.left-side {
+    width : 20%;
+}
+
+.fellowship-main-content > div.right-side {
+    width : 80%;
+}
+
