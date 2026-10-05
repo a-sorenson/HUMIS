@@ -1,3 +1,7 @@
+:root {
+    --primary_color: #60663e;
+}
+
 /*Mobile Styles*/
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -34,10 +38,18 @@ div#container {
             section.green-box {
                 padding: 20px;
                 justify-content: space-evenly;
-            }
 
-            nav.primary {
-                display: block;
+                nav.primary {
+                    display: block;
+                }
+
+                div.links {
+                    display: flex;
+                }
+
+                div.left-side {
+                    display: flex;
+                }
             }
 
             main {
@@ -118,6 +130,11 @@ section.green-box {
         background: white;
         padding: 10px;
     }
+
+    .left-side {
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 nav.primary{
@@ -127,7 +144,7 @@ nav.primary{
         display: block;
         text-decoration: none;
         color: black;
-        border-bottom: 2px solid #60663e;
+        border-bottom: 2px solid var(--primary_color);
         padding: 8px 0 8px 12px;
         text-transform: uppercase;
         font-size: 11px;
@@ -135,14 +152,14 @@ nav.primary{
 
         &:hover{
             color: white;
-            background-color: #60663e;
+            background-color: var(--primary_color);
 
         }
     }
 }
 
 .links {
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
     align-items: flex-start;
     margin-bottom: 10px;
@@ -162,7 +179,7 @@ main {
     }
 
     h4 {
-        color:#60663e;
+        color: var(--primary_color);
         text-transform: uppercase;
     }
 
@@ -185,7 +202,7 @@ section.footer {
     text-align: center;
     text-transform: uppercase;
     font-size: 8px;
-    background: #60663e;
+    background: var(--primary_color);
     color: white;
     padding: 5px;
 }
@@ -210,7 +227,7 @@ h4 {
 .fellowship-main-content > div.left-side {
     width : 27%;
     background-color: rgba(96, 102, 62, 0.13);
-    border-right: #60663e solid 1px;
+    border-right: var(--primary_color) solid 1px;
     margin-bottom: 0;
 }
 
