@@ -21,8 +21,29 @@ div#container {
     @media screen and (width > 600px) {
         border: solid 10px black;
 
-        nav.secondary {
-            justify-content: right;
+        section.main-content-area {
+
+            > nav {
+                justify-content: right;
+
+                &.drop-down-menu {
+                    display: none;
+                }
+            }
+
+            section.green-box {
+                padding: 20px;
+                justify-content: space-evenly;
+            }
+
+            nav.primary {
+                display: block;
+            }
+
+            main {
+                width:62%;
+                margin-bottom: 50px;
+            }
         }
     }
 }
@@ -45,6 +66,18 @@ section.main-content-area {
     background-position: right bottom;
 }
 
+nav.drop-down-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+    select {
+        width: 100%;
+        text-transform: uppercase;
+        background: none;
+        border: solid 1px black;
+    }
+}
 nav.secondary{
     min-height: 20px;
     padding-right: 20px;
@@ -71,19 +104,25 @@ nav.secondary{
         }
     }
 }
-section.brown-box {
+section.green-box {
     background: url("./files/brownBox.gif") center repeat;
-    padding: 20px;
+    padding: 10px;
     margin: 0 20px 70px 20px;
     justify-self: center;
     border-radius: 10px;
     min-height: 400px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    main {
+        background: white;
+        padding: 10px;
+    }
 }
 
 nav.primary{
 
+    display:none;
     a {
         display: block;
         text-decoration: none;
@@ -107,6 +146,39 @@ nav.primary{
     flex-direction: column-reverse;
     align-items: flex-start;
     margin-bottom: 10px;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+
+    #pottery_img {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    h4 {
+        color:#60663e;
+        text-transform: uppercase;
+    }
+
+    div.more{
+        text-align: right;
+        a {
+            color: red;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+
+            &:hover{ /*pseudo class when users mouse overs*/
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 section.footer {
@@ -152,14 +224,14 @@ h4 {
     margin-left: 20px;
 }
 
-.fellowship-main-content > div.right-side {
+.fellowship-main-content > div.main {
     width : 70%;
     margin-bottom: 0;
     padding-left: 30px;
     padding-right: 0;
 }
 
-.fellowship-main-content > div.right-side > nav.bottomNav {
+.fellowship-main-content > div.main > nav.bottomNav {
     padding: 0 5px 0 0;
 }
 
