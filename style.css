@@ -23,7 +23,6 @@ div#container {
 
     /*Tablet and Up Overrides*/
     @media screen and (width > 600px) {
-        border: solid 10px black;
 
         section.main-content-area {
 
