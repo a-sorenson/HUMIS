@@ -1,5 +1,6 @@
 :root {
     --primary_color: #60663e;
+    --light_green: #f0f2f3;
 }
 
 /*Mobile Styles*/
@@ -23,7 +24,7 @@ div.container {
 
     /*Tablet and Up Overrides*/
     @media screen and (width > 600px) {
-        section.main-content-area {
+        section.inner {
 
             > nav {
                 justify-content: right;
@@ -67,7 +68,7 @@ section.sub-head {
     height: 50px;
 }
 
-section.main-content-area {
+section.inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -114,6 +115,7 @@ nav.secondary{
         }
     }
 }
+
 section.green-box {
     background: url("./files/brownBox.gif") center repeat;
     padding: 10px;

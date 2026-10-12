@@ -1,3 +1,8 @@
+:root {
+    --primary_color: #60663e;
+    --light_green: #f0f2f3;
+    --secondary_color: #c31430;
+}
 
 body {
     background-color: #292929;
@@ -17,8 +22,45 @@ body {
             }
         }
 
-        .main-content-area {
-            border: blue solid 10px;
+        .middle {
+            height: 100%;
+
+            div.left-side {
+                display: none;
+            }
+
+            section.inner {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                nav.minor {
+                    min-height: 20px;
+                    padding-right: 20px;
+                    font-size: 9px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        text-transform: uppercase;
+
+                        &:hover { /*pseudo class when users mouse overs*/
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                main {
+                    padding: 30px;
+                    h1 {
+                        color: var(--secondary_color);
+                    }
+                }
+        }
 
             nav.drop-down-menu {
                 display: flex;
@@ -35,15 +77,64 @@ body {
         }
 
         footer {
-
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 8px;
+            background: var(--primary_color);
+            color: white;
+            padding: 5px;
         }
 
         @media screen and (width > 600px) {
-            section.main-content-area {
-                nav.drop-down-menu {
-                    display: none;
+            section.middle {
+                display: flex;
+                justify-content: space-between;
+
+                div.left-side {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 30%;
+                    background-color: var(--light_green);
+
+                    nav.primary {
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            color: black;
+                            border-bottom: 2px solid var(--primary_color);
+                            padding: 12px 0 12px 12px;
+                            text-transform: uppercase;
+                            font-size: 11px;
+                            margin: 0 15px 0 15px;
+
+                            &:hover{
+                                color: white;
+                                background-color: var(--primary_color);
+
+                            }
+                        }
+                    }
+
+                    .login-links {
+                        padding-left: 20px;
+                    }
+                }
+
+                section.inner {
+                    width: 70%;
+                    nav {
+                        &.drop-down-menu {
+                            display: none;
+                        }
+                        &.minor {
+                            justify-content: right;
+                        }
+                    }
+
                 }
             }
+
         }
     }
 }
