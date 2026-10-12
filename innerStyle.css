@@ -1,0 +1,50 @@
+
+body {
+    background-color: #292929;
+
+    section.container {
+        border: yellow solid 1px;
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 780px;
+
+        header {
+            img {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .main-content-area {
+            border: blue solid 10px;
+
+            nav.drop-down-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 12px;
+                select {
+                    width: 100%;
+                    text-transform: uppercase;
+                    background: none;
+                    border: solid 1px black;
+                }
+            }
+        }
+
+        footer {
+
+        }
+
+        @media screen and (width > 600px) {
+            section.main-content-area {
+                nav.drop-down-menu {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
