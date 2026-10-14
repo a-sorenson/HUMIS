@@ -6,23 +6,26 @@
 
 body {
     background-color: #292929;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
 
     section.container {
-        border: yellow solid 1px;
         background-color: white;
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         max-width: 780px;
 
         header {
+            border-bottom: var(--primary_color) 5px solid;
             img {
                 width: 100%;
-                margin: 0;
+                display: block;
             }
         }
 
-        .middle {
+        .main-content-area {
             height: 100%;
 
             div.left-side {
@@ -36,7 +39,7 @@ body {
 
                 nav.minor {
                     min-height: 20px;
-                    padding-right: 20px;
+                    padding: 0 20px 0 0;
                     font-size: 9px;
                     display: flex;
                     justify-content: center;
@@ -54,10 +57,26 @@ body {
                     }
                 }
 
+                nav.bottom {
+                    padding-right: 5px;
+                    a {
+                        text-transform: lowercase;
+                    }
+                }
+
                 main {
-                    padding: 30px;
+                    padding: 0 30px;
                     h1 {
                         color: var(--secondary_color);
+                        text-transform: uppercase;
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-top: 30px;
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        margin-top: 5px;
                     }
                 }
         }
@@ -66,12 +85,15 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 12px;
+                margin: 12px 30px 0 30px;
+
                 select {
                     width: 100%;
-                    text-transform: uppercase;
-                    background: none;
-                    border: solid 1px black;
+                    text-transform: capitalize;
+                    border: solid 1px lightgrey;
+                    background-color: var(--light_green);
+                    padding: 10px;
+                    border-radius: 10px;
                 }
             }
         }
@@ -83,10 +105,11 @@ body {
             background: var(--primary_color);
             color: white;
             padding: 5px;
+
         }
 
         @media screen and (width > 600px) {
-            section.middle {
+            section.main-content-area {
                 display: flex;
                 justify-content: space-between;
 
@@ -94,10 +117,12 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    align-items: center;
                     width: 30%;
                     background-color: var(--light_green);
 
                     nav.primary {
+                        padding-top: 10px;
                         a {
                             display: block;
                             text-decoration: none;
@@ -117,7 +142,12 @@ body {
                     }
 
                     .login-links {
-                        padding-left: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        max-width: 150px;
+                        padding: 30px;
                     }
                 }
 

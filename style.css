@@ -24,7 +24,7 @@ div.container {
 
     /*Tablet and Up Overrides*/
     @media screen and (width > 600px) {
-        section.inner {
+        section.main-content-area {
 
             > nav {
                 justify-content: right;
