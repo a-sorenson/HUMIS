@@ -19,57 +19,57 @@ h1 {
     text-transform: uppercase;
 }
 
+/* OVERRIDES FOR DESKTOP AND TABLET*/
+@media screen and (width > 600px) {
+    /*SITEWIDE OVERRIDES*/
+    section.main-content-area {
+        > nav {
+            justify-content: right;
+
+            &.drop-down-menu {
+                display: none;
+            }
+        }
+
+        .leftNav {
+            display: flex;
+            nav.primary {
+                display: block;
+            }
+
+            div.login_links {
+                display: flex;
+            }
+        }
+
+        main {
+            width:62%;
+            margin-bottom: 50px;
+        }
+    }
+
+    /*HOMEPAGE OVERRIDES*/
+    section.green-box {
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+}
+
+/*SITEWIDE STYLES*/
 div.page-container {
     min-width: 390px;
     max-width : 780px;
     margin: 0 auto;
     background-color: white;
+}
 
-    header {
-        img {
-            display: block;
-            width: 100%
-        }
-    }
-
-    /*Tablet and Up Overrides*/
-    @media screen and (width > 600px) {
-        section.main-content-area {
-
-            > nav {
-                justify-content: right;
-
-                &.drop-down-menu {
-                    display: none;
-                }
-            }
-
-            section.green-box {
-                gap: 20px;
-                justify-content: space-evenly;
-
-                nav.primary {
-                    display: block;
-                }
-
-                div.login_links {
-                    display: flex;
-                }
-
-                div.leftNav {
-                    display: flex;
-                }
-            }
-
-            main {
-                width:62%;
-                margin-bottom: 50px;
-            }
-        }
+header {
+    img {
+        display: block;
+        width: 100%
     }
 }
 
-/*SITEWIDE STYLES*/
 nav.drop-down-menu {
     display: flex;
     justify-content: center;
