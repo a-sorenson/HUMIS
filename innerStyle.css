@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
 
-    section.container {
+    section.page-container {
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -28,7 +28,7 @@ body {
         .main-content-area {
             height: 100%;
 
-            div.left-side {
+            div.leftNav {
                 display: none;
             }
 
@@ -113,7 +113,7 @@ body {
                 display: flex;
                 justify-content: space-between;
 
-                div.left-side {
+                div.leftNav {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
