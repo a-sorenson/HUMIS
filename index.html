@@ -7,33 +7,33 @@
 
 </head>
 <body>
-    <div class="page-container">
+    <section class="page-container">
         <header>
             <img src="files/historyHome.gif" alt="Homepage header"/>
             <img src="files/histBooks01.jpg" alt="book subhead"/>
         </header>
 
-        <section class="main-content-area homepage">
+        <nav class="drop-down-menu">
+            <label for="navDrop"></label>
+            <select name="navDrop" id="navDrop">
+                <option value="#" selected="selected">Navigate to...</option>
+                <option value="#">About Us</option>
+                <option value="#">Faculty &amp Staff</option>
+                <option value="#">Undergraduate Students</option>
+                <option value="#">Graduate Students</option>
+                <option value="#">Courses &amp Syllabi </option>
+                <option value="#">News &amp Announcements</option>
+                <option value="#">Friends &amp Alumni</option>
+                <option value="#">Contact Us</option>
+            </select>
+        </nav>
+
+        <section class="content-block homepage">
             <nav class="secondary topNav">
                 <a href="#">Campus Directory</a>|
                 <a href="#">Department Calendar</a>|
                 <a href="#">Contact Us</a>|
                 <img src="files/u_small.gif" alt="U" height="16" width="16"/>
-            </nav>
-
-            <nav class="drop-down-menu">
-                <label for="navDrop"></label>
-                <select name="navDrop" id="navDrop">
-                    <option value="#" selected="selected">Navigate to...</option>
-                    <option value="#">About Us</option>
-                    <option value="#">Faculty &amp Staff</option>
-                    <option value="#">Undergraduate Students</option>
-                    <option value="#">Graduate Students</option>
-                    <option value="#">Courses &amp Syllabi </option>
-                    <option value="#">News &amp Announcements</option>
-                    <option value="#">Friends &amp Alumni</option>
-                    <option value="#">Contact Us</option>
-                </select>
             </nav>
 
             <section class="green-box">
@@ -49,18 +49,17 @@
                         <a href="contact-us.html">Contact Us</a>
                     </nav>
 
-                    <div class="login_links">
+                    <div class="login-links">
                         <img src="files/login-cis.gif" alt="CIS login">
                         <img src="files/login-humis.gif" alt="HUMIS login">
                     </div>
                 </div>
 
-
                 <main>
                     <img id="pottery_img" src="files/women_w_pottery.jpg" alt="pottery">
                     <h1 class="article-heading">News &amp; Announcements</h1>
 
-                    <p><strong>The History of Women &amp; Gender in Mexico:</strong> Met wismodo lestrud mod ent lum dit
+                    <p class="homepage-text"><strong>The History of Women &amp; Gender in Mexico:</strong> Met wismodo lestrud mod ent lum dit
                         nim iure erostis nos nulpute ming ea conse molore dipis nullutem numsan velis nisi blaor
                         sequis nulputem quat ilit wismolortis ad dunt lutat eliquisl utat vulla conulla faccum vel
                         inibh erci tie conulla feummod dolor aut accumsan vel esequisi bla adio odolorting erosto
@@ -78,7 +77,7 @@
             </nav>
         </section>
 
-        <section class="footer">
+        <footer>
                 380 South 1400 East |
                 211 C Hall |
                 Salt Lake City |
@@ -86,7 +85,7 @@
                 84112 |
                 Phone 801.581.6121 |
                 Fax 801.585.0580
-        </section>
-    </div>
+        </footer>
+    </section>
 </body>
 </html>

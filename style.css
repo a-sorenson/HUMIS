@@ -2,7 +2,10 @@
 :root {
     --primary_color: #60663e;
     --light_green: #f0f2f3;
-    --body_color: #292929
+    --body_color: #292929;
+    --border_color: #b7bc9b;
+    --primaryNav_border: #556524;
+    --secondary_color: #C31430FF;
 }
 
 /*GENERAL STYLES*/
@@ -12,55 +15,32 @@ body {
 }
 
 p {
-    font-size: 10px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.content-information {
+    padding: 0 32px;
 }
 
 h1 {
     text-transform: uppercase;
 }
 
-/* OVERRIDES FOR DESKTOP AND TABLET*/
-@media screen and (width > 600px) {
-    /*SITEWIDE OVERRIDES*/
-    section.main-content-area {
-        > nav {
-            justify-content: right;
-
-            &.drop-down-menu {
-                display: none;
-            }
-        }
-
-        .leftNav {
-            display: flex;
-            nav.primary {
-                display: block;
-            }
-
-            div.login_links {
-                display: flex;
-            }
-        }
-
-        main {
-            width:62%;
-            margin-bottom: 50px;
-        }
-    }
-
-    /*HOMEPAGE OVERRIDES*/
-    section.green-box {
-        gap: 20px;
-        justify-content: space-evenly;
-    }
+h1.content-heading {
+    color: var(--secondary_color);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 32px 0 32px;
 }
 
 /*SITEWIDE STYLES*/
-div.page-container {
+section.page-container {
     min-width: 390px;
     max-width : 780px;
     margin: 0 auto;
     background-color: white;
+    min-height: 695px;
 }
 
 header {
@@ -83,51 +63,8 @@ nav.drop-down-menu {
     }
 }
 
-.leftNav {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    nav.primary{
-        display:none;
-        a {
-            display: block;
-            text-decoration: none;
-            color: black;
-            border-bottom: 2px solid var(--primary_color);
-            padding: 8px 0 8px 12px;
-            text-transform: uppercase;
-            font-size: 11px;
-            margin: 0 15px 0 15px;
-
-            &:hover{
-                color: white;
-                background-color: var(--primary_color);
-
-            }
-        }
-    }
-
-    .login_links {
-        display: none;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        margin-bottom: 10px;
-    }
-}
-
-div.more-link{
-    text-align: right;
-    a {
-        color: red;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 12px;
-
-        &:hover{ /*pseudo class when users mouse overs*/
-            text-decoration: underline;
-        }
-    }
+section.content-block {
+    min-height: 75vh;
 }
 
 nav.secondary{
@@ -157,7 +94,82 @@ nav.secondary{
     }
 }
 
-section.footer {
+section.innerPage-block {
+    display: flex;
+}
+
+.leftNav {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    nav.primary{
+        display:none;
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            border-bottom: 2px solid var(--primaryNav_border);
+            padding: 8px 0 8px 12px;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin: 0 15px 0 15px;
+
+            &:hover{
+                color: white;
+                background-color: var(--primary_color);
+
+            }
+        }
+    }
+
+    .login-links {
+        display: none;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+}
+
+div.innerPage-leftNav {
+    display: none;
+    min-width: 27%;
+    padding: 10px 0;
+    background: var(--light_green);
+    border-right: 2px solid var(--border_color);
+}
+
+section.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    main {
+        display: block;
+    }
+}
+
+div.right-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+div.more-link {
+    text-align: right;
+    a {
+        color: var(--secondary_color);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+
+        &:hover{ /*pseudo class when users mouse overs*/
+            text-decoration: underline;
+        }
+    }
+}
+
+footer {
     text-align: center;
     text-transform: uppercase;
     font-size: 8px;
@@ -167,6 +179,11 @@ section.footer {
 }
 
 /*HOMEPAGE STYLES*/
+p.homepage-text {
+    font-size: 10px;
+    padding: 0;
+}
+
 section.homepage {
     background-image: url("./files/uofu_medallion_rt.gif");
     background-repeat: no-repeat;
@@ -202,6 +219,65 @@ section.green-box {
     }
 }
 
+/*ABOUT PAGE STYLES*/
+div.watch-link {
+    text-align: center;
+}
+
+img#graduation_pic {
+    border-radius: 20px;
+    width:100%
+}
+
+/* OVERRIDES FOR DESKTOP AND TABLET*/
+@media screen and (width > 600px) {
+    /*SITEWIDE OVERRIDES*/
+
+    nav.secondary.topNav {
+        justify-content: right;
+    }
+
+    nav.drop-down-menu {
+        display: none;
+    }
+
+    nav.secondary.bottomNav {
+        justify-content: right;
+    }
+
+    section.content-block {
+        .leftNav {
+            display: flex;
+            nav.primary {
+                display: block;
+            }
+
+            div.login-links {
+                display: flex;
+            }
+        }
+
+        main {
+
+            margin-bottom: 50px;
+        }
+    }
+
+    div.right-image-container {
+        float: right;
+        img#graduation_pic {
+            width: 180px;
+        }
+        margin: 0 0 16px 16px;
+    }
+
+    /*HOMEPAGE OVERRIDES*/
+    section.green-box {
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+
+}
 /*REFACTOR NEEDED BELOW*/
 /*Fellowship css*/
 
@@ -225,7 +301,7 @@ section.green-box {
     margin-top: 10px;
 }
 
-.fellowship-main-content > div.leftNav > .login_links {
+.fellowship-main-content > div.leftNav > .login-links {
     margin-bottom: 50px;
     margin-left: 20px;
 }
@@ -256,5 +332,3 @@ h3 {
     font-size: 9pt;
     margin-right: 30px;
 }
-
-

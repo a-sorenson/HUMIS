@@ -25,7 +25,7 @@ body {
             }
         }
 
-        .main-content-area {
+        .content-block {
             height: 100%;
 
             div.leftNav {
@@ -109,7 +109,7 @@ body {
         }
 
         @media screen and (width > 600px) {
-            section.main-content-area {
+            section.content-block {
                 display: flex;
                 justify-content: space-between;
 
