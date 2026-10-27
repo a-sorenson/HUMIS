@@ -139,6 +139,10 @@ div.innerPage-leftNav {
     border-right: 2px solid var(--border_color);
 }
 
+nav.desktopTopNav{
+    display: none;
+}
+
 section.inner {
     display: flex;
     flex-direction: column;
@@ -235,6 +239,14 @@ img#graduation_pic {
 
     nav.secondary.topNav {
         justify-content: right;
+    }
+
+    nav.mobileTopNav{
+        display: none;
+    }
+
+    nav.desktopTopNav{
+        display: flex;
     }
 
     nav.drop-down-menu {
