@@ -34,13 +34,28 @@ h1.content-heading {
     padding: 20px 32px 0 32px;
 }
 
+div.heading-box {
+    border-bottom: 7px solid var(--secondary_color);
+    padding-right: 24px;
+    h1.student-heading {
+        color: var(--secondary_color);
+        font-size: 18pt;
+        margin-bottom: -6px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}
+
 /*SITEWIDE STYLES*/
 section.page-container {
     min-width: 390px;
     max-width : 780px;
     margin: 0 auto;
     background-color: white;
-    min-height: 695px;
+}
+
+section.inner-container {
+    min-height: 100vh;
 }
 
 header {
@@ -64,7 +79,7 @@ nav.drop-down-menu {
 }
 
 section.content-block {
-    min-height: 75vh;
+    min-height: 100vh;
 }
 
 nav.secondary{
@@ -96,9 +111,12 @@ nav.secondary{
 
 section.innerPage-block {
     display: flex;
+    min-height: 100vh;
+    align-items: stretch;
 }
 
 .leftNav {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -131,7 +149,7 @@ section.innerPage-block {
     }
 }
 
-div.innerPage-leftNav {
+div.leftNav.innerPage-leftNav {
     display: none;
     min-width: 27%;
     padding: 10px 0;
@@ -143,20 +161,31 @@ nav.desktopTopNav{
     display: none;
 }
 
-section.inner {
+section.rightCol-content {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    main {
-        display: block;
-    }
+    flex:1;
 }
 
 div.right-image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
+div.nav-column {
+    display: none;
+}
+
+div.content-column {
+    padding: 0 24px;
+    margin-top: 20px;
 }
 
 div.more-link {
@@ -192,6 +221,9 @@ section.homepage {
     background-image: url("./files/uofu_medallion_rt.gif");
     background-repeat: no-repeat;
     background-position: right bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 section.green-box {
@@ -228,12 +260,19 @@ div.watch-link {
     text-align: center;
 }
 
-img#graduation_pic {
+.default-pic {
+    width:100%;
     border-radius: 20px;
-    width:100%
+}
+
+/*STUDENT PAGES STYLES*/
+
+div.student-link {
+    text-align: center;
 }
 
 /* OVERRIDES FOR DESKTOP AND TABLET*/
+
 @media screen and (width > 600px) {
     /*SITEWIDE OVERRIDES*/
 
@@ -255,6 +294,45 @@ img#graduation_pic {
 
     nav.secondary.bottomNav {
         justify-content: right;
+        background: transparent;
+    }
+
+    main.main-student-page {
+        margin-left: 28px;
+    }
+
+    div.twoCol-container {
+        display: flex;
+        flex: 1;
+    }
+
+    div.heading-box {
+        margin-left: 28px;
+        h1.student-heading {
+            font-size: 20pt;
+            margin-bottom: -8px;
+            text-align: right;
+        }
+    }
+
+    div.student-link {
+        text-align: right;
+    }
+    div.nav-column {
+        border-right: 1px dashed var(--primary_color);
+        display: block;
+        margin-top: 12px;
+        min-width: 30%;
+        nav.inner-section-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            a {
+                display: block;
+                text-transform: capitalize;
+                font-size: 8pt;
+            }
+        }
     }
 
     section.content-block {
@@ -267,11 +345,6 @@ img#graduation_pic {
             div.login-links {
                 display: flex;
             }
-        }
-
-        main {
-
-            margin-bottom: 50px;
         }
     }
 

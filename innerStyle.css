@@ -32,7 +32,7 @@ body {
                 display: none;
             }
 
-            section.inner {
+            section.rightCol-content {
                 display: flex;
                 flex-direction: column;
                 height: 100%;
@@ -156,7 +156,7 @@ body {
                     }
                 }
 
-                section.inner {
+                section.rightCol-content {
                     width: 70%;
                     nav {
                         &.drop-down-menu {
