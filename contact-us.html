@@ -1,76 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>InnerPage</title>
-    <link type="text/css" href="innerStyle.css" rel="stylesheet">
+    <title>Contact Us</title>
+    <link type="text/css" href="style.css" rel="stylesheet">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <section class="container">
+    <section class="page-container">
         <header>
             <a href="index.html"><img src="files/historyHeader.gif" alt="header"/></a>
-            <img src="files/histBooks01.jpg" alt="header"/>
         </header>
 
-        <section class="main-content-area">
-            <div class="left-side">
-                <nav class="primary">
-                    <a href="#">About us</a>
-                    <a href="#">faculty &amp; staff</a>
-                    <a href="#">Undergraduate Students</a>
-                    <a href="#">Graduate Students</a>
-                    <a href="#">Courses &amp Syllabi </a>
-                    <a href="#">News &amp Announcements</a>
-                    <a href="#">Friends &amp Alumni</a>
-                    <a href="contact-us.html" class="active">Contact Us</a>
-                </nav>
+        <section class="inner-container">
+            <nav class="secondary topNav mobileTopNav">
+                <a href="#">Campus Directory</a>|
+                <a href="#">Department Calendar</a>|
+                <a href="#">Contact Us</a>|
+                <img src="files/u_small.gif" alt="U" height="16" width="16"/>
+            </nav>
 
-                <div class="login-links">
-                    <img src="files/login-humis.gif" alt="HUMIS login">
-                    <img src="files/login-cis.gif" alt="CIS login">
-                </div>
-            </div>
+            <nav class="drop-down-menu">
+                <label for="navDrop"></label>
+                <select name="navDrop" id="navDrop">
+                    <option value="#" selected="selected">Navigate to...</option>
+                    <option value="#">About Us</option>
+                    <option value="#">Faculty &amp Staff</option>
+                    <option value="#">Undergraduate Students</option>
+                    <option value="#">Graduate Students</option>
+                    <option value="#">Courses &amp Syllabi </option>
+                    <option value="#">News &amp Announcements</option>
+                    <option value="#">Friends &amp Alumni</option>
+                    <option value="#">Contact Us</option>
+                    <optgroup label="Contact Information">
+                        <option value="#">Contact Information</option>
+                        <option value="#">Faculty Directory</option>
+                        <option value="#">Staff Directory</option>
+                    </optgroup>
+                </select>
+            </nav>
 
-            <section class="inner">
-                <nav class="minor top">
-                    <a href="#">Campus Directory</a>|
-                    <a href="#">Department Calendar</a>|
-                    <a href="#">Contact Us</a>|
-                    <img src="files/u_small.gif" alt="U" height="16" width="16"/>
-                </nav>
+            <section class="content-block innerPage-block">
+                <div class="leftNav innerPage-leftNav">
+                    <nav class="primary">
+                        <a href="aboutUs.html" class="active">About us</a>
+                        <a href="#">faculty &amp; staff</a>
+                        <a href="#">Undergraduate Students</a>
+                        <a href="#">Graduate Students</a>
+                        <a href="#">Courses &amp Syllabi </a>
+                        <a href="#">News &amp Announcements</a>
+                        <a href="#">Friends &amp Alumni</a>
+                        <a href="#">Contact Us</a>
+                    </nav>
 
-                <nav class="drop-down-menu">
-                    <label for="navDrop"></label>
-                    <select name="navDrop" id="navDrop">
-                        <option value="#" selected="selected">Navigate to...</option>
-                        <option value="#">About Us</option>
-                        <option value="#">Faculty &amp Staff</option>
-                        <option value="#">Undergraduate Students</option>
-                        <option value="#">Graduate Students</option>
-                        <option value="#">Courses &amp Syllabi </option>
-                        <option value="#">News &amp Announcements</option>
-                        <option value="#">Friends &amp Alumni</option>
-                        <option value="#">Contact Us</option>
-                    </select>
-                </nav>
-
-                <main>
-                    <h1>Contact Information</h1>
-
-                    <div class="contact-card">
-                        <h2>Name</h2>
-                        <p>Information</p>
-
+                    <div class="login-links">
+                        <img src="files/login-cis.gif" alt="HUMIS login">
+                        <img src="files/login-humis.gif" alt="CIS login">
                     </div>
+                </div>
 
-                </main>
+                <section class="rightCol-content contact-us-content">
+                    <nav class="secondary topNav desktopTopNav">
+                        <a href="#">Campus Directory</a>|
+                        <a href="#">Department Calendar</a>|
+                        <a href="#">Contact Us</a>|
+                        <img src="files/u_small.gif" alt="U" height="16" width="16"/>
+                    </nav>
 
-                <nav class="minor bottom">
-                    <a href="#">Disclaimer</a>|
-                    <a href="#">Text only</a>|
-                    <a href="#">Webmaster</a>
-                </nav>
+                    <section class="contact-heading-container">
+                        <nav class="secondary contact-us-nav">
+                            <a href="#">Contact information | </a>
+                            <a href="#">faculty directory | </a>
+                            <a href="#">staff directory</a>
+                        </nav>
+                    </section>
 
+                    <h1 class="contact-heading content-heading">Contact Information</h1>
+
+                    <main class="contact-us-container">
+                        <section class="contact-cards">
+                            <div class="contact-card">
+                                <h2>U.S Mail</h2>
+                                  <p>University of Utah</p>
+                                <p>Department of History</p>
+                                <p>380 S 1400 E RM 211</p>
+                                <p>Salt Lake City, UT 84112-0311</p>
+                            </div>
+
+                            <div class="contact-card">
+                                <h2>Campus Mail</h2>
+                                <p>Department of History</p>
+                                <p>211 C HALL</p>
+                            </div>
+
+                            <div class="contact-card">
+                                <h2>Phone</h2>
+                                <p>(801) 581-6121</p>
+                            </div>
+
+                            <div class="contact-card">
+                                <h2>Fax</h2>
+                                <p>(801) 585-0580</p>
+                            </div>
+
+                            <div class="contact-card">
+                                <h2>Hours</h2>
+                                <p>Monday - Friday</p>
+                                <p>8:00 AM - 5:00 PM</p>
+                            </div>
+                        </section>
+
+                        <nav class="secondary bottomNav">
+                            <a href="#">Disclaimer</a>|
+                            <a href="#">Text only</a>|
+                            <a href="#">Webmaster</a>
+                        </nav>
+                    </main>
+                </section>
             </section>
         </section>
         <footer>
