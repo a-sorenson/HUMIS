@@ -40,6 +40,17 @@ h2 {
     margin: 0;
 }
 
+img.default-pic {
+    width:100%;
+    border-radius: 20px;
+}
+
+img.innerText-pic {
+    float: right;
+    shape-outside: url("files/matt.png");
+    /*shape-margin: 10px;*/
+}
+
 /*SITEWIDE STYLES*/
 section.page-container {
     min-width: 390px;
@@ -254,11 +265,6 @@ div.watch-link {
     text-align: center;
 }
 
-.default-pic {
-    width:100%;
-    border-radius: 20px;
-}
-
 /*STUDENT PAGES STYLES*/
 div.heading-box {
     border-bottom: 7px solid var(--secondary_color);
@@ -322,6 +328,14 @@ section.contact-us-content {
 
 .contact-heading-container {
     display: none;
+}
+
+/*FACULTY PAGE STYLES*/
+
+#facultyPhoto-Matt {
+    width: 50%;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 /* OVERRIDES FOR DESKTOP AND TABLET*/
@@ -439,7 +453,6 @@ section.contact-us-content {
     main.contact-us-container {
         margin-top: 10px;
     }
-
 }
 /*REFACTOR NEEDED BELOW*/
 /*Fellowship css*/
