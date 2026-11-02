@@ -34,19 +34,7 @@ h1.content-heading {
     padding: 20px 32px 0 32px;
 }
 
-div.heading-box {
-    border-bottom: 7px solid var(--secondary_color);
-    padding-right: 24px;
-    h1.student-heading {
-        color: var(--secondary_color);
-        font-size: 18pt;
-        margin-bottom: -6px;
-        text-align: center;
-        letter-spacing: 1px;
-    }
-}
-
-h2.heading-innerNav {
+h2 {
     font-size: 8pt;
     text-transform: uppercase;
     margin: 0;
@@ -272,6 +260,17 @@ div.watch-link {
 }
 
 /*STUDENT PAGES STYLES*/
+div.heading-box {
+    border-bottom: 7px solid var(--secondary_color);
+    padding-right: 24px;
+    h1.student-heading {
+        color: var(--secondary_color);
+        font-size: 18pt;
+        margin-bottom: -6px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}
 
 div.student-link {
     text-align: center;
