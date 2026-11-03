@@ -15,7 +15,7 @@
             <nav class="secondary topNav mobileTopNav">
                 <a href="#">Campus Directory</a>|
                 <a href="#">Department Calendar</a>|
-                <a href="#">Contact Us</a>|
+                <a href="">Contact Us</a>|
                 <img src="files/u_small.gif" alt="U" height="16" width="16"/>
             </nav>
 
@@ -31,14 +31,10 @@
                     <option value="#">News &amp Announcements</option>
                     <option value="#">Friends &amp Alumni</option>
                     <option value="#">Contact Us</option>
-                    <optgroup label="Undergraduate Students">
-                        <option value="#">Advising</option>
-                        <option value="#">Requirements</option>
-                        <option value="#">Scholarships</option>
-                        <option value="#">Graduation</option>
-                        <option value="#">Handbook</option>
-                        <option value="#">Student Advisory committee</option>
-                        <option value="#">Phi Theta Alpha</option>
+                    <optgroup label="Faculty Navigation">
+                        <option value="#">New Faculty</option>
+                        <option value="#">Faculty Listing</option>
+                        <option value="#">Staff Listing</option>
                     </optgroup>
                 </select>
             </nav>
@@ -46,14 +42,14 @@
             <section class="content-block innerPage-block">
                 <div class="leftNav innerPage-leftNav">
                     <nav class="primary">
-                        <a href="aboutUs.html" class="active">About us</a>
-                        <a href="#">faculty &amp; staff</a>
-                        <a href="#">Undergraduate Students</a>
-                        <a href="#">Graduate Students</a>
+                        <a href="aboutUs.html">About us</a>
+                        <a href="faculty.html">faculty &amp; staff</a>
+                        <a href="undergraduates.html">Undergraduate Students</a>
+                        <a href="graduates.html">Graduate Students</a>
                         <a href="#">Courses &amp Syllabi </a>
                         <a href="#">News &amp Announcements</a>
                         <a href="#">Friends &amp Alumni</a>
-                        <a href="#">Contact Us</a>
+                        <a href="contact-us.html">Contact Us</a>
                     </nav>
 
                     <div class="login-links">
@@ -71,31 +67,72 @@
                     </nav>
 
                     <main class="main-student-page">
-                        <div class="twoCol-container">
-                            <div class="nav-column">
-                                nav here
+                        <div class="twoCol-container twoCol-container-faculty">
+                            <div class="nav-column faculty-nav">
+                                <h1 class="content-heading faculty-heading caps-heading">Faculty &amp; Staff</h1>
+                                <section class="faculty-nav-container">
+                                    <nav class="inner-section-nav inner-faculty-nav">
+                                        <a href="#" class="bold-link">New Faculty</a>
+                                        <a href="#" class="sublink">Matthew Basso</a>
+                                        <a href="#" class="sublink">Belinda Peters</a>
+                                        <a href="#" class="sublink">Paul Reeve</a>
+                                        <a href="#">Faculty Listing</a>
+                                        <a href="#">Staff Listing</a>
+                                    </nav>
+
+                                    <section class="contact-cards faculty-cards">
+                                        <div class="contact-card faculty-card">
+                                            <h2>Eric Hinderaker</h2>
+                                            <h3>Department Chair</h3>
+                                            <p>308 Carlson Hall</p>
+                                            <p>581-5685</p>
+                                            <p>ehinderaker@history.utah.edu</p>
+                                        </div>
+
+                                        <div class="contact-card faculty-card">
+                                            <h2>Amanda Biesinger</h2>
+                                            <h3>Undergraduate Advisor</h3>
+                                            <p>211 Carlson Hall</p>
+                                            <p>581-6420</p>
+                                            <p>amanda.biesinger@utah.edu</p>
+                                        </div>
+
+                                        <div class="contact-card faculty-card">
+                                            <h2>Rebecca Horn</h2>
+                                            <h3>Associate Chair</h3>
+                                            <p>Undergraduate Director</p>
+                                            <p>211 Carlson Hall</p>
+                                            <p>581-5294</p>
+                                            <p>rebecca.horn@history.utah.edu</p>
+                                        </div>
+
+                                        <div class="contact-card faculty-card">
+                                            <h2>Lindsay Adams</h2>
+                                            <h3>Graduate Director</h3>
+                                            <p>211 Carlson Hall</p>
+                                            <p>581-8592</p>
+                                            <p>winthrop.adams@utah.edu</p>
+                                        </div>
+                                    </section>
+                                </section>
                             </div>
 
                             <div class="content-column">
-                                <h1 class="content-heading">New Faculty</h1>
+                                <h1 class="content-heading faculty-heading">New Faculty</h1>
 
                                 <div class="facultyInfo-paragraph">
                                     <p>
-                                        MATTHEW BASSO | Matt Basso, jointly appointed in History and Gender Studies,
-                                        comes to the Universityof Utah from the University of Richmond where he was
+                                        <span class="large-text red-text">MATTHEW BASSO |</span> Matt Basso, jointly appointed in History and Gender Studies,
+                                        comes to the University of Utah from the University of Richmond where he was
                                         an Assistant Professor of History and American Studies specializing in 20th
                                         century political, social, and cultural history. He received his Ph.D. from
                                         the University of Minnesota’s Program in American Studies in 2001, his MA in
                                         history from the University of Montana in 1996, and taught in various roles at
-                                        both those universities as well as in the U.S. Army while serving in Germany
-                                        during the Gulf War. He retired as a Captain in 1994. Prior to his stint in
-                                        uniform he spent four glorious years at Vassar College where his keen interest
-                                        in gendered relations of power was born.
-                                    </p>
-
-                                    <img src="files/matt.png" class="innerText-pic" id="facultyPhoto-Matt" alt="Matt"/>
-
-                                    <p>
+                                        both those universities as well as in the
+                                        <img src="files/matt.png" class="innerText-pic" id="facultyPhoto-Matt" alt="Matt"/>
+                                        U.S. Army while serving in Germany during the Gulf War. He retired as a Captain in 1994.
+                                        Prior to his stint in uniform he spent four glorious years at Vassar College where
+                                        his keen interest in gendered relations of power was born.
                                         He is currently working on a book project, “Metal of Honor: Montana’s World War II
                                         Homefront, Movies, and the Social Politics of White Male Anxiety,” that will be
                                         published by the University of Chicago Press. The instrumental wartime role of
@@ -108,14 +145,13 @@
                                         work on his next project: a comparative transnational exploration of racial and gender
                                         formations among Pacific settler societies (New Zealand, Australia, Canada, and the U.S.).
                                     </p>
+
+                                    <div class="more-link viewPage-link"><a href="#">>> view Matthew Basso's page</a></div>
                                 </div>
-
-
-
                             </div>
                         </div>
 
-                        <nav class="secondary bottomNav">
+                        <nav class="secondary bottomNav facultyBtmNav">
                             <a href="#">Disclaimer</a>|
                             <a href="#">Text only</a>|
                             <a href="#">Webmaster</a>

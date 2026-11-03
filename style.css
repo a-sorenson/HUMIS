@@ -40,6 +40,12 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    font-size: 8pt;
+    font-style: italic;
+    margin: 0;
+}
+
 img.default-pic {
     width:100%;
     border-radius: 20px;
@@ -47,8 +53,21 @@ img.default-pic {
 
 img.innerText-pic {
     float: right;
-    shape-outside: url("files/matt.png");
-    /*shape-margin: 10px;*/
+    padding: 10px;
+}
+
+.large-text {
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.red-text {
+    color: var(--secondary_color);
+}
+
+a.sublink {
+    padding-left: 10px;
+    color: var(--secondary_color);
 }
 
 /*SITEWIDE STYLES*/
@@ -191,6 +210,7 @@ div.nav-column {
 div.content-column {
     padding: 0 24px;
     margin-top: 20px;
+    order: 1;
 }
 
 div.more-link {
@@ -294,13 +314,8 @@ div.student-nav-links {
     vertical-align: middle;
 }
 
-.large-text {
-    font-weight: bold;
-    font-size: 10pt;
-}
 
 /*CONTACT US STYLES*/
-
 .contact-cards {
     display: flex;
     flex-direction: column;
@@ -331,11 +346,79 @@ section.contact-us-content {
 }
 
 /*FACULTY PAGE STYLES*/
-
 #facultyPhoto-Matt {
     width: 50%;
-    margin: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+.facultyInfo-paragraph {
+    display: flex;
+    flex-direction: column;
+    > p {
+        margin-bottom: 0;
+    }
+}
+
+h1.faculty-heading {
+    font-size: 12pt;
+    text-transform: capitalize;
+    padding: 20px 24px 12px 0;
+    margin: 0;
+}
+
+div.viewPage-link {
+    a {
+        text-transform: none;
+        font-size: 8pt;
+    }
+}
+
+nav.facultyBtmNav {
+    margin-top: 20px;
+}
+
+div.twoCol-container-faculty {
+    display: flex;
+    flex-direction: column;
+}
+
+h1.caps-heading {
+    text-transform: uppercase;
+    font-size: 10pt;
+}
+
+div.faculty-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    > h2 {
+        text-transform: capitalize;
+    }
+
+    p {
+        font-size: 8pt;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+}
+
+div.nav-column.faculty-nav {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    flex: 0 0 30%;
+    min-width: 0;
+    padding: 24px;
+}
+
+section.contact-cards.faculty-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav.inner-faculty-nav {
+    display: none;
 }
 
 /* OVERRIDES FOR DESKTOP AND TABLET*/
@@ -386,6 +469,7 @@ section.contact-us-content {
     div.student-link {
         text-align: right;
     }
+
     div.nav-column {
         border-right: 1px dashed var(--primary_color);
         display: block;
@@ -453,58 +537,45 @@ section.contact-us-content {
     main.contact-us-container {
         margin-top: 10px;
     }
-}
-/*REFACTOR NEEDED BELOW*/
-/*Fellowship css*/
 
-.fellowship-main-content {
-    display: flex;
-}
+    /*FACULTY OVERRIDES*/
+    div.twoCol-container-faculty {
+        display: flex;
+        flex-direction: row;
+    }
 
-#header_img {
-    width: 100%;
-}
+    section.faculty-nav-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-.fellowship-main-content > div.leftNav {
-    width : 27%;
-    background-color: rgba(96, 102, 62, 0.13);
-    border-right: var(--primary_color) solid 1px;
-    margin-bottom: 0;
-}
+    nav.inner-section-nav.inner-faculty-nav {
+        display: flex;
+        gap: 5px;
 
-.fellowship-main-content > div.leftNav > nav {
-    margin-bottom: 300px;
-    margin-top: 10px;
-}
+        a {
+            color: black;
+            text-decoration: none;
 
-.fellowship-main-content > div.leftNav > .login-links {
-    margin-bottom: 50px;
-    margin-left: 20px;
-}
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
-.fellowship-main-content > div.main {
-    width : 70%;
-    margin-bottom: 0;
-    padding-left: 30px;
-    padding-right: 0;
-}
+        a.sublink {
+            color: var(--secondary_color);
+        }
 
-.fellowship-main-content > div.main > nav.bottomNav {
-    padding: 0 5px 0 0;
-}
+        a.bold-link {
+            font-weight: bold;
+        }
+    }
 
-h3 {
-    color: #b30000;
-    text-transform: uppercase;
-    font-size: 9pt;
-    margin-top: 30px;
-}
-
-#fellowship_info {
-    margin-bottom: 200px;
-}
-
-#fellowship_info > p {
-    font-size: 9pt;
-    margin-right: 30px;
+    div.nav-column.faculty-nav {
+        order: 1;
+        min-width: 0;
+        padding: 10px;
+    }
 }
